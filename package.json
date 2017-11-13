@@ -1,0 +1,24 @@
+{
+  "name": "falmusha.me",
+  "version": "1.0.0",
+  "keywords": [
+    "gatsby"
+  ],
+  "main": "n/a",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.js\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "gatsby": "^1.9.102",
+    "gatsby-link": "^1.6.24",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-typescript": "^1.4.10",
+    "prettier": "^1.8.1",
+    "typescript": "^2.6.1"
+  }
+}
