@@ -1,8 +1,6 @@
-import * as React from "react";
+import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
-
-import "./index.css";
 
 const Header = () => (
   <div>
@@ -12,10 +10,10 @@ const Header = () => (
   </div>
 );
 
-const TemplateWrapper = ({ children }) => (
+export default ({ children, data }) => (
   <div>
     <Helmet
-      title="Fahad Almusharraf"
+      title={data.site.siteMetadata.title}
       meta={[
         { name: "description", content: "Personal website" },
         { name: "keywords", content: "blog, showcase, personal" }
@@ -26,4 +24,12 @@ const TemplateWrapper = ({ children }) => (
   </div>
 );
 
-export default TemplateWrapper;
+export const query = graphql`
+  query LayoutQuery {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`;

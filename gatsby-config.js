@@ -1,10 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: "Fahad Almusharraf website"
+    title: "Fahad Almusharraf - Website",
+    author: "Fahad Almusharraf"
   },
   plugins: [
+    "gatsby-plugin-catch-links",
     "gatsby-plugin-react-helmet",
-    "gatsby-plugin-typescript",
-    "gatsby-plugin-netlify"
+    "gatsby-plugin-netlify",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        path: `${__dirname}/src`,
+        name: "src"
+      }
+    },
+    {
+      resolve: "gatsby-transformer-remark",
+      options: {
+        plugins: []
+      }
+    }
   ]
 };
