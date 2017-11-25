@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Header from "../components/Header";
 import COLORS from "../colors";
 
+import "prismjs/themes/prism.css";
+
 const Body = styled.div`
   display: flex;
   flex-direction: column;
