@@ -1,21 +1,57 @@
 import React from "react";
 import Link from "gatsby-link";
+import styled from "styled-components";
+import COLORS from "../colors";
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-top: 50px;
+`;
+
+const EntryLink = styled(Link)`
+  text-decoration: none;
+  color: #008584;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const TitleWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+`;
+
+const Title = styled.div`
+  font-size: 22px;
+  font-weight: 500;
+  color: ${COLORS.DARKEST};
+`;
+
+const Date = styled.span`
+  font-size: 16px;
+`;
+
+const BlogEntry = ({ node }) => (
+  <div key={node.id}>
+    <TitleWrapper>
+      <EntryLink to={node.fields.slug}>
+        <Title>{node.frontmatter.title}</Title>
+      </EntryLink>
+      <Date>{node.frontmatter.date}</Date>
+    </TitleWrapper>
+    <p>{node.excerpt}</p>
+  </div>
+);
 
 export default ({ data }) => {
   return (
-    <div>
-      <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+    <Wrapper>
       {data.allMarkdownRemark.edges.map(({ node }) => (
-        <div key={node.id}>
-          <Link to={node.fields.slug}>
-            <h3>
-              {node.frontmatter.title} <span>— {node.frontmatter.date}</span>
-            </h3>
-            <p>{node.excerpt}</p>
-          </Link>
-        </div>
+        <BlogEntry node={node} />
       ))}
-    </div>
+    </Wrapper>
   );
 };
 

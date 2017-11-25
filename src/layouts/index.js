@@ -1,17 +1,34 @@
 import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
+import styled from "styled-components";
+import Header from "../components/Header";
+import COLORS from "../colors";
 
-const Header = () => (
-  <div>
-    <h1>
-      <Link to="/">Home</Link>
-    </h1>
-  </div>
-);
+const Body = styled.div`
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0px auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+
+  color: ${COLORS.BASE};
+
+  a {
+    color: ${COLORS.BASE};
+
+    &:hover {
+      color: ${COLORS.DARKEST};
+      font-weight: 400;
+    }
+  }
+`;
+
+const Container = styled.div``;
 
 export default ({ children, data }) => (
-  <div>
+  <Body>
     <Helmet
       title={data.site.siteMetadata.title}
       meta={[
@@ -20,8 +37,8 @@ export default ({ children, data }) => (
       ]}
     />
     <Header />
-    <div>{children()}</div>
-  </div>
+    <Container>{children()}</Container>
+  </Body>
 );
 
 export const query = graphql`

@@ -1,19 +1,42 @@
 import React from "react";
 import Helmet from "react-helmet";
+import styled from "styled-components";
+import COLORS from "../colors";
+
+const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Title = styled.h1`
+  color: ${COLORS.DARKEST};
+`;
+
+const Article = styled.article`
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: ${COLORS.BLACK};
+  }
+  p {
+    color: ${COLORS.DARKEST};
+  }
+`;
 
 export default ({ data }) => {
   const post = data.markdownRemark;
   return (
-    <div className="blog-post-container">
+    <Wrapper>
       <Helmet title={post.frontmatter.title} />
-      <div className="blog-post">
-        <h1>{post.frontmatter.title}</h1>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: post.html }}
-        />
-      </div>
-    </div>
+      <Title>{post.frontmatter.title}</Title>
+      <Article
+        className="blog-post-content"
+        dangerouslySetInnerHTML={{ __html: post.html }}
+      />
+    </Wrapper>
   );
 };
 
