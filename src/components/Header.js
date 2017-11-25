@@ -35,13 +35,21 @@ const NavLink = styled(Link)`
   }
 `;
 
+const ResumeLink = styled.a`
+  text-decoration: none;
+  color: ${COLORS.DARK};
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
 const Menu = () => (
   <Nav>
     <NavLink to="/">Blog</NavLink>
     <NavSeparator>|</NavSeparator>
     <NavLink to="/projects">Projects</NavLink>
     <NavSeparator>|</NavSeparator>
-    <NavLink to="/resume.pdf">Resume</NavLink>
+    <ResumeLink href="/static/cv.pdf">Resume</ResumeLink>
     <NavSeparator>|</NavSeparator>
     <NavLink to="/About">About</NavLink>
   </Nav>
