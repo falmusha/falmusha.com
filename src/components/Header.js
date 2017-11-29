@@ -52,7 +52,7 @@ const Menu = () => (
     <NavSeparator>|</NavSeparator>
     <ResumeLink href={CV}>Resume</ResumeLink>
     <NavSeparator>|</NavSeparator>
-    <NavLink to="/About">About</NavLink>
+    <NavLink to="/about">About</NavLink>
   </Nav>
 );
 
