@@ -6310,10 +6310,6 @@ postcss@^6.0.1, postcss@^6.0.14:
     source-map "^0.6.1"
     supports-color "^4.4.0"
 
-preloadfill@jonathantneal/preloadfill:
-  version "0.0.0"
-  resolved "https://codeload.github.com/jonathantneal/preloadfill/tar.gz/a4678ef4c7ab3975421f9cd4a8114dbecaeb0e38"
-
 prepend-http@^1.0.0, prepend-http@^1.0.1:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"

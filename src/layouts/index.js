@@ -2,7 +2,6 @@ import React from "react";
 import Link from "gatsby-link";
 import Helmet from "react-helmet";
 import styled from "styled-components";
-import "preloadfill";
 import Header from "../components/Header";
 import COLORS from "../colors";
 
