@@ -22,6 +22,7 @@
     "gatsby-remark-prismjs": "^1.2.9",
     "gatsby-source-filesystem": "^1.5.8",
     "gatsby-transformer-remark": "^1.7.21",
+    "preloadfill": "jonathantneal/preloadfill",
     "prettier": "^1.8.1",
     "styled-components": "^2.2.3"
   },
