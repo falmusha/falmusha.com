@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "gatsby-link";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import CV from "../assets/cv.pdf";
 import COLORS from "../colors";
 
 const Wrapper = styled.div`
@@ -49,7 +50,7 @@ const Menu = () => (
     <NavSeparator>|</NavSeparator>
     <NavLink to="/projects">Projects</NavLink>
     <NavSeparator>|</NavSeparator>
-    <ResumeLink href="/static/cv.pdf">Resume</ResumeLink>
+    <ResumeLink href={CV}>Resume</ResumeLink>
     <NavSeparator>|</NavSeparator>
     <NavLink to="/About">About</NavLink>
   </Nav>
