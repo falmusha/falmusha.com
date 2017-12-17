@@ -23,6 +23,8 @@ const Article = styled.article`
   }
   p {
     color: ${COLORS.DARKEST};
+    text-align: justify;
+    line-height: 1.5;
   }
 `;
 

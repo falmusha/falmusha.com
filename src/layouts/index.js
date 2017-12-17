@@ -10,19 +10,15 @@ import "prismjs/themes/prism.css";
 const Body = styled.div`
   display: flex;
   flex-direction: column;
-  max-width: 600px;
+  max-width: 800px;
   margin: 0px auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
     Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  color: ${COLORS.BASE};
-
   a {
-    color: ${COLORS.BASE};
-
+    color: ${COLORS.DARK};
     &:hover {
-      color: ${COLORS.DARKEST};
-      font-weight: 400;
+      color: ${COLORS.BLACK};
     }
   }
 `;
@@ -37,7 +33,13 @@ export default ({ children, data }) => (
         { name: "description", content: "Personal website" },
         { name: "keywords", content: "blog, showcase, personal" }
       ]}
-    />
+    >
+      <style type="text/css">{`
+        body {
+          background-color: ${COLORS.LIGHTEST};
+        }
+    `}</style>
+    </Helmet>
     <Header />
     <Container>{children()}</Container>
   </Body>

@@ -6,7 +6,8 @@ import COLORS from "../colors";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
+  font-size: 18px;
+  text-align: justify;
 `;
 
 export default ({ data }) => {

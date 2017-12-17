@@ -6,7 +6,6 @@ import COLORS from "../colors";
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  padding-top: 50px;
 `;
 
 const EntryLink = styled(Link)`

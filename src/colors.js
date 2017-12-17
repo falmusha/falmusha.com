@@ -1,8 +1,9 @@
 export default {
-  LIGHTEST: "#DAE4E9",
-  LIGHT: "#9BABB4",
-  BASE: "#70818A",
-  DARK: "#596A73",
-  DARKEST: "#364349",
-  BLACK: "#222B2F"
+  WHITE: "white",
+  LIGHTEST: "#F5F5F5",
+  LIGHT: "#E0E0E0",
+  BASE: "#757575",
+  DARK: "#616161",
+  DARKEST: "#212121",
+  BLACK: "black"
 };

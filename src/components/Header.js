@@ -8,7 +8,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
+  padding: 30px 20px;
 `;
 
 const Logo = styled.div`
@@ -21,17 +21,19 @@ const Nav = styled.div`
   display: flex;
   flex-direction: row;
   font-size: 24px;
+  padding-bottom: 40px;
 `;
 
 const NavSeparator = styled.span`
   margin: 0px 10px;
-  color: ${COLORS.DARKEST};
+  color: ${COLORS.DARK};
 `;
 
 const NavLink = styled(Link)`
   text-decoration: none;
   color: ${COLORS.DARK};
   &:hover {
+    color: ${COLORS.BLACK};
     text-decoration: underline;
   }
 `;
@@ -40,6 +42,7 @@ const ResumeLink = styled.a`
   text-decoration: none;
   color: ${COLORS.DARK};
   &:hover {
+    color: ${COLORS.BLACK};
     text-decoration: underline;
   }
 `;
